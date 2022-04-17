@@ -2,5 +2,7 @@
   "dependencies": {
     "solc": "^0.8.13",
     "truffle": "^5.5.10"
-  }
+  },
+  "license": "unlicensed"
 }
+
