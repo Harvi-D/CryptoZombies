@@ -7,4 +7,9 @@ contract ZombieFactory {
     uint256 dnaDigits = 16;
     //ensure Zombie's DNA is only 16 characters
     uint256 dnaModulus = 10**dnaDigits;
+    //struct: looks like a class in JS... kind of
+    struct Zombie {
+        string name;
+        uint256 dna;
+    }
 }
