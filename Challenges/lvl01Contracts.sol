@@ -12,4 +12,7 @@ contract ZombieFactory {
         string name;
         uint256 dna;
     }
+    //Arrays: can use 'fixedArray'(uint[3] fixedArray; / string[5] fixedArray;), 'dynamicArray'(uint[] dynamicArray;), and public arrays (example below: allows to read, not write; store public data)
+    //public array of structs for zombies
+    Zombie[] public zombies;
 }
