@@ -3,6 +3,8 @@
 pragma solidity >=0.8.13; // solidity version
 
 contract ZombieFactory {
+    //declare a new event to be used when a new zombie is created
+    event NewZombie(uint256 zombieId, string name, uint256 dna);
     //make a 16 digit variable for zombie appearence
     uint256 dnaDigits = 16;
     //ensure Zombie's DNA is only 16 characters
@@ -20,6 +22,9 @@ contract ZombieFactory {
     function createZombie(string memory _name, uint256 _dna) public {
         //array.push() method
         zombies.push(Zombie(_name, _dna));
+        //fire event here
+        uint256 id = zombies.length - 1;
+        emit NewZombie(id, _name, _dna);
     }
 
     //private view-function for generating a 16 digit dna; accepts a string
