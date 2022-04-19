@@ -27,5 +27,9 @@ contract ZombieFactory {
         private
         view
         returns (uint256)
-    {}
+    {
+        //built-in hash function 'keccak256', maps input to a random 256-bit hexidecimal number;  keccak256 expects a single parameter of type 'bytes'. This means that we have to "pack" any parameters before calling keccak256
+        uint256 rand = uint256(keccak256(abi.encodePacked(_str)));
+        return rand % dnaModulus;
+    }
 }
