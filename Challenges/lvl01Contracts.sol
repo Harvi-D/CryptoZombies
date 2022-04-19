@@ -17,5 +17,8 @@ contract ZombieFactory {
     Zombie[] public zombies;
 
     //function references (arrays, strings, structs, mappings) need declaration of where variable is stored ie: memory; convention dictates that function parameter variable names start with an underscore ie: _varaibleName;
-    function createZombie(string memory _name, uint256 _dna) public {}
+    function createZombie(string memory _name, uint256 _dna) public {
+        //array.push() method
+        zombies.push(Zombie(_name, _dna));
+    }
 }
