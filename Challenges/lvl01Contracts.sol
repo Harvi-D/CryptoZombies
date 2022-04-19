@@ -15,4 +15,7 @@ contract ZombieFactory {
     //Arrays: can use 'fixedArray'(uint[3] fixedArray; / string[5] fixedArray;), 'dynamicArray'(uint[] dynamicArray;), and public arrays (example below: allows to read, not write; store public data)
     //public array of structs for zombies
     Zombie[] public zombies;
+
+    //function references (arrays, strings, structs, mappings) need declaration of where variable is stored ie: memory; convention dictates that function parameter variable names start with an underscore ie: _varaibleName;
+    function createZombie(string memory _name, uint256 _dna) public {}
 }
