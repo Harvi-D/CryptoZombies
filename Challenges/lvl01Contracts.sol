@@ -21,4 +21,11 @@ contract ZombieFactory {
         //array.push() method
         zombies.push(Zombie(_name, _dna));
     }
+
+    //private view-function for generating a 16 digit dna; accepts a string
+    function _generateRandomDna(string memory _str)
+        private
+        view
+        returns (uint256)
+    {}
 }
